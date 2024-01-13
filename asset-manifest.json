@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/Ecommerce-shopping-cart/static/css/main.f6d1fc9f.css",
+    "main.js": "/Ecommerce-shopping-cart/static/js/main.1089ac4e.js",
+    "static/js/787.b1e6304a.chunk.js": "/Ecommerce-shopping-cart/static/js/787.b1e6304a.chunk.js",
+    "static/media/shoes2.jpg": "/Ecommerce-shopping-cart/static/media/shoes2.a23a0f2b1f17f04acb19.jpg",
+    "static/media/clothes.jpg": "/Ecommerce-shopping-cart/static/media/clothes.d19760e69a34742dc556.jpg",
+    "static/media/bagSlider.jpg": "/Ecommerce-shopping-cart/static/media/bagSlider.954b65e4ea963031019e.jpg",
+    "static/media/produces.jpg": "/Ecommerce-shopping-cart/static/media/produces.5aee46f085da3e089e2c.jpg",
+    "static/media/do.jpg": "/Ecommerce-shopping-cart/static/media/do.a286a0db3c5ab05c8f22.jpg",
+    "static/media/vag.jpg": "/Ecommerce-shopping-cart/static/media/vag.a755b52f32dd56a07ef8.jpg",
+    "static/media/con.jpg": "/Ecommerce-shopping-cart/static/media/con.25f7d4083eafd0132adf.jpg",
+    "static/media/fa-solid-900.ttf": "/Ecommerce-shopping-cart/static/media/fa-solid-900.bb5be820e5eb072d5758.ttf",
+    "static/media/fa-brands-400.ttf": "/Ecommerce-shopping-cart/static/media/fa-brands-400.4c05cd9bfc1270fb1cd0.ttf",
+    "static/media/fa-solid-900.woff2": "/Ecommerce-shopping-cart/static/media/fa-solid-900.4cbe3db2046bbf3f98b1.woff2",
+    "static/media/fa-brands-400.woff2": "/Ecommerce-shopping-cart/static/media/fa-brands-400.498f4d22186034d218e9.woff2",
+    "static/media/fa-regular-400.ttf": "/Ecommerce-shopping-cart/static/media/fa-regular-400.96e19e1a389efc52c1ac.ttf",
+    "static/media/fa-regular-400.woff2": "/Ecommerce-shopping-cart/static/media/fa-regular-400.83824cd5b836d63b9eac.woff2",
+    "static/media/fa-v4compatibility.ttf": "/Ecommerce-shopping-cart/static/media/fa-v4compatibility.6b0efc2420efff557025.ttf",
+    "static/media/fa-v4compatibility.woff2": "/Ecommerce-shopping-cart/static/media/fa-v4compatibility.62590c81afe6966dda05.woff2",
+    "static/media/logo.svg": "/Ecommerce-shopping-cart/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/slick.svg": "/Ecommerce-shopping-cart/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Ecommerce-shopping-cart/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Ecommerce-shopping-cart/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Ecommerce-shopping-cart/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Ecommerce-shopping-cart/index.html",
+    "main.f6d1fc9f.css.map": "/Ecommerce-shopping-cart/static/css/main.f6d1fc9f.css.map",
+    "main.1089ac4e.js.map": "/Ecommerce-shopping-cart/static/js/main.1089ac4e.js.map",
+    "787.b1e6304a.chunk.js.map": "/Ecommerce-shopping-cart/static/js/787.b1e6304a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6d1fc9f.css",
+    "static/js/main.1089ac4e.js"
+  ]
+}
