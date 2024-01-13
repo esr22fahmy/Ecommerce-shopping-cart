@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter ,createHashRouter } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Layout from "./Components/Layout/Layout";
 import Products from "./Components/Products/Products";
