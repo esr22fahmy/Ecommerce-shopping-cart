@@ -1,0 +1,35 @@
+
+:root {
+    --greenColor: rgb(17,175,17);
+  }
+
+.ShopCart{
+    font-weight: 300 !important;
+    text-transform: capitalize;
+    font-size: 2.5rem;
+}
+
+.TotalePrice{
+color: var(--greenColor);
+font-weight: 400 !important;
+text-transform: capitalize;
+
+
+}
+
+.iconRemove{
+    color: var(--greenColor) !important;
+
+}
+
+.btnCout{
+    border: 1px solid var(--greenColor);
+    border-radius: 15%;
+    padding: 0.3rem 0.7rem;
+    color: var(--greenColor);
+}
+
+.btnCout:hover{
+background-color: rgb(44, 105, 44);
+color: white;
+}
