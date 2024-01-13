@@ -22,7 +22,7 @@ import AllOrders from "./Components/AllOrders/AllOrders";
 
 export default function App() {
   let newClient = new QueryClient();
-  let routes = createBrowserRouter([
+  let routes = createHashRouter([
     {
       path: "/",
       element: <Layout />,
