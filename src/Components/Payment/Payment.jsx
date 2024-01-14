@@ -11,9 +11,7 @@ export default function Payment() {
   let [DetailsValue, setDetails] = useState("");
 
   async function confirmCash() {
-    // let PhoneValue = document.querySelector("#phone").value;
-    // let CityValue = document.querySelector("#city").value;
-    // let DetailsValue = document.querySelector("#details").value;
+  
 
     let shippingDetails = {
       // object at api
@@ -39,8 +37,7 @@ export default function Payment() {
         setPhone("");
         setCity("");
         setDetails("");
-        //order علشان بعد ما اعمل ال
-        // يفضي الcart
+        // clear cart
         setCartsProduct([]);
         setNumOfCartItems(0);
         setTotalCartPrice(0);

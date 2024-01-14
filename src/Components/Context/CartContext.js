@@ -11,7 +11,6 @@ export function CartContextProvider({ children }) {
   const [CartsId, setCartsId] = useState(null);
 
 
-// دي خالص بصفحه ال Products
 // add products at cart
   async function addProductContext(productId) {
     try {
@@ -26,7 +25,6 @@ export function CartContextProvider({ children }) {
       setNumOfCartItems(data.numOfCartItems)
       // setTotalCartPrice(data.data.totalCartPrice)
 
-          // تحديث بيانات السلة بعد إضافة المنتج
       await getUserCart();
 
       return data;
@@ -74,7 +72,6 @@ async function DeleteProduct(id){
     setCartsProduct(data.data.products);
     setNumOfCartItems(data.numOfCartItems);
     setTotalCartPrice(data.data.totalCartPrice);
-// تحديث بيانات السلة بعد حذف المنتج
 await getUserCart();
 
 return data;
@@ -113,7 +110,6 @@ return data;
 
 
 useEffect(() => {
-  // mean call getUserCart once the user login
 
   getUserCart();
 
@@ -141,7 +137,6 @@ useEffect(() => {
 
   return (
 
-      // addProductContext => Children علشان يكون شير علي كل ال value حطيته هنا في ال
 
     <contextCart.Provider value={{ addProductContext ,getUserCart , cartsProduct ,numOfCart ,totalCartPrice 
     ,DeleteProduct ,updateProduct ,CartsId ,setCartsProduct ,setNumOfCartItems ,setTotalCartPrice ,clearCart }}>

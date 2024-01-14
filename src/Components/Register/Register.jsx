@@ -21,10 +21,7 @@ export default function Register() {
   };
 
   let funVaild = function (value) {
-    // console.log(value)
-
-    // علشان validate بتشتغل اول ما المستخدم يعمل تعديل
-    // بحط setErrorMessage هنا علشان لو المستخدم عدل يشيل الاورور
+ 
     setErrorMessage("");
 
     let errors = {};
@@ -81,9 +78,7 @@ export default function Register() {
   };
 
   async function registerNewUser(val) {
-    //  حطيتها هنا علشان ال fun دي هتشتغل
-    // اول ما المستخدم يعمل onSubmit
-    // يعني يدوس علي ال btn
+  
     setloadingBtn(true);
     try {
       let { data } = await axios.post(
@@ -108,7 +103,6 @@ export default function Register() {
       console.log(errorMessage);
     }
 
-    // يشيله بعد ما المستخدم يدوس
     setloadingBtn(false);
   }
 
@@ -139,7 +133,6 @@ export default function Register() {
             onChange={formFun.handleChange}
             onBlur={formFun.handleBlur}
           />
-          {/* (touched) you must put because don't show user el error  unless the user enters the input*/}
           {formFun.errors.name && formFun.touched.name ? (
             <div className="  alert alert-danger">{formFun.errors.name} </div>
           ) : (

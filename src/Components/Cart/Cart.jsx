@@ -24,23 +24,6 @@ export default function Cart() {
     }
   }
 
-  // if (cartsProduct === null) {
-  //   return (
-  //     <div className=" vh-100 d-flex justify-content-center align-items-center">
-  //       <RotatingLines
-  //         visible={true}
-  //         height="96"
-  //         width="96"
-  //         color="grey"
-  //         strokeWidth="5"
-  //         animationDuration="0.75"
-  //         ariaLabel="rotating-lines-loading"
-  //         wrapperStyle={{}}
-  //         wrapperClass=""
-  //       />
-  //     </div>
-  //   );
-  // }
 
   if (!cartsProduct || cartsProduct.length === 0) {
     return (

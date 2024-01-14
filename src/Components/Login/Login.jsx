@@ -25,8 +25,6 @@ export default function Login() {
   let funVaild = function (value) {
     // console.log(value)
 
-    // علشان validate بتشتغل اول ما المستخدم يعمل تعديل
-    // بحط setErrorMessage هنا علشان لو المستخدم عدل يشيل الاورور
     setErrorMessage("");
 
     let errors = {};
@@ -60,9 +58,7 @@ export default function Login() {
   };
 
   async function loginAccount(val) {
-    //  حطيتها هنا علشان ال fun دي هتشتغل
-    // اول ما المستخدم يعمل onSubmit
-    // يعني يدوس علي ال btn
+
     setloadingBtn(true);
     try {
       let { data } = await axios.post(
@@ -97,7 +93,6 @@ export default function Login() {
       // console.log(errorMessage);
     }
 
-    // يشيله بعد ما المستخدم يدوس
     setloadingBtn(false);
   }
 
