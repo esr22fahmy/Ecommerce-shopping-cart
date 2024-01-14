@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter ,createHashRouter} from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Layout from "./Components/Layout/Layout";
 import Products from "./Components/Products/Products";
@@ -19,10 +19,11 @@ import Cart from "./Components/Cart/Cart";
 import Profile from "./Components/Profile/Profile";
 import Payment from "./Components/Payment/Payment";
 import AllOrders from "./Components/AllOrders/AllOrders";
+import NotFound from "./Components/NotFound/NotFound";
 
 export default function App() {
   let newClient = new QueryClient();
-  let routes = createBrowserRouter([
+  let routes = createHashRouter([
     {
       path: "/",
       element: <Layout />,
@@ -41,7 +42,9 @@ export default function App() {
         { path: "productsDetails/:id", element:<ProtectedRoute><ProductsDetails /></ProtectedRoute>},
         { path: "login", element: <Login /> },
         { path: "register", element: <Register /> },
+        { path:"*" , element:<NotFound/>}
         // { path: "logout", element: <Logout /> },
+
       ],
     },
   ]);
