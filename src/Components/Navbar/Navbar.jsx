@@ -46,7 +46,6 @@ export default function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            {/* كده لو  token مش فاضي خالي دول باينين */}
             {token ? (
               <>
                 {" "}

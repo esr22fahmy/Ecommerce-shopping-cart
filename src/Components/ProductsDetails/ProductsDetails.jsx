@@ -22,11 +22,8 @@ export default function ProductsDetails() {
     let res = await addProductContext(id)
     console.log(res)
     if(res.status ==="success"){
-      // messageاللي بعد ال  objectال  
-      // ده option ممكن اتكتبه وممكن لا
-      // option دايما بيكون objectال
+      
       toast.success(res.message ,{
-        // success   دي في المكتبه بتعمل علامه الصح جنب الكلام
         duration:2000,
     
     

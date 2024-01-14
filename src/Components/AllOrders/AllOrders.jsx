@@ -10,9 +10,7 @@ export default function AllOrders() {
   useEffect(() => {
     let resId = jwtDecode(localStorage.getItem("tok"));
     // setUserId(resId.id);
-    //هنا useStateمش هينفع استخدم ال
-    // علشان لسه هستنها setData , rerender
-    // فهتظهرلي ب null
+  
     getUserAllOrders(resId.id);
   }, []);
 
