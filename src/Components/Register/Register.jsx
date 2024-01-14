@@ -119,7 +119,7 @@ export default function Register() {
   });
   return (
     <>
-      <div className=" w-75 m-auto py-5">
+      <div style={{marginTop:"8rem" ,display: "flex", flexDirection: "column", minHeight: "100vh" }} className=" w-75 m-auto py-5">
         <h2> Register Now :</h2>
 
         <form onSubmit={formFun.handleSubmit} className=" pt-5">

@@ -72,7 +72,7 @@ if(isLoading){
     <HomeSlick/>
 
     <CategoriesSlick/>
-<div className=" container py-5">
+<div style={{marginTop:"8rem" ,display: "flex", flexDirection: "column", minHeight: "100vh" }} className=" container py-5">
             <div className=" row">
               {data?.data.data.map((pr, index) => (
                 <div key={index} className=" col-md-2  ">

@@ -118,7 +118,7 @@ export default function Login() {
   }, [token])
   return (
     <>
-      <div className=" w-75 m-auto py-5">
+      <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}  className=" w-75 m-auto pt-5">
         <h2> Login Now :</h2>
 
         <form onSubmit={formFun.handleSubmit} className=" pt-5">
