@@ -80,7 +80,7 @@ export default function Navbar() {
                   <li className="nav-item">
                     <Link className="nav-link position-relative" to="/cart">
                       Cart
-                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      <span className="position-absolute top-0  translate-middle badge rounded-pill bg-danger">
                         {numOfCart}
 
                         <span className="visually-hidden">unread messages</span>
