@@ -5,7 +5,7 @@ export const AuthContext = createContext();
 
 export function AuthProvider({children}){
 
-const [token, setToken] = useState(null);
+const [token, setToken] = useState();
 
 // useEffect =>  هتشتغل لما اعمل ريفرش للموقع
 // useEffect(function()  {
@@ -18,8 +18,10 @@ const [token, setToken] = useState(null);
 useEffect(() => {
     // قم بتعيين قيمة token من localStorage إذا كانت متاحة
     const storedToken = localStorage.getItem("tok");
-    if (storedToken !== null) {
+    if (storedToken) {
       setToken(storedToken);
+    }else{
+      setToken(null)
     }
   }, []);
 

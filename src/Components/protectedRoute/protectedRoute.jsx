@@ -6,7 +6,7 @@ import { Navigate } from "react-router-dom";
 export default function ProtectedRoute({ children }) {
   
   let { token } = useContext(AuthContext);
-  console.log(token);
+  // console.log(token);
 
   if (token === null) {
     // console.log('null tokennnn')

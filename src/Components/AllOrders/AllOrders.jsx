@@ -46,7 +46,8 @@ export default function AllOrders() {
 
   return (
     <>
-      <div className=" container pt-5">
+
+      <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }} className=" container pt-5">
         <div className="row g-4">
           {UserOrders.map((order, index) => (
             <div key={index} className="  col-md-6 ">
