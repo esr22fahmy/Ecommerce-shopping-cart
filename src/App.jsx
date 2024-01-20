@@ -20,6 +20,7 @@ import Profile from "./Components/Profile/Profile";
 import Payment from "./Components/Payment/Payment";
 import AllOrders from "./Components/AllOrders/AllOrders";
 import NotFound from "./Components/NotFound/NotFound";
+import { Offline } from "react-detect-offline";
 
 export default function App() {
   let newClient = new QueryClient();
@@ -50,7 +51,9 @@ export default function App() {
   ]);
 
   return (
-    <QueryClientProvider client={newClient}>
+   <>
+   
+   <QueryClientProvider client={newClient}>
       {/* for CartContext */}
       
          <CartContextProvider>
@@ -67,5 +70,32 @@ export default function App() {
          <Toaster/>
     </QueryClientProvider>
 
+   
+   <Offline >
+
+    <div className=" position-fixed  top-0 start-0  bg-dark text-white p-3 rounded-3  text-capitalize">
+
+
+opps... you are offline now.
+    </div>
+
+
+   </Offline>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   </>
   );
 }

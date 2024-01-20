@@ -13,6 +13,7 @@
     "formik": "^2.4.5",
     "jwt-decode": "^4.0.0",
     "react": "^18.2.0",
+    "react-detect-offline": "^2.4.5",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-loader-spinner": "^5.4.5",
@@ -25,7 +26,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-   "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
