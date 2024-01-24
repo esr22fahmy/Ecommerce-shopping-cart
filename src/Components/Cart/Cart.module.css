@@ -1,7 +1,8 @@
 
 :root {
-    --greenColor: rgb(17,175,17);
+    --blueColor: rgb(88,105,168);
   }
+
 
 .ShopCart{
     font-weight: 300 !important;
@@ -10,7 +11,7 @@
 }
 
 .TotalePrice{
-color: var(--greenColor);
+color: var(--blueColor);
 font-weight: 400 !important;
 text-transform: capitalize;
 
@@ -18,15 +19,15 @@ text-transform: capitalize;
 }
 
 .iconRemove{
-    color: var(--greenColor) !important;
+    color: var(--blueColor) !important;
 
 }
 
 .btnCout{
-    border: 1px solid var(--greenColor);
+    border: 1px solid var(--blueColor);
     border-radius: 15%;
     padding: 0.3rem 0.7rem;
-    color: var(--greenColor);
+    color: var(--blueColor);
 }
 
 .btnCout:hover{

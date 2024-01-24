@@ -1,6 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { RouterProvider, createBrowserRouter ,createHashRouter} from "react-router-dom";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createHashRouter,
+} from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Layout from "./Components/Layout/Layout";
 import Products from "./Components/Products/Products";
@@ -29,73 +33,109 @@ export default function App() {
       path: "/",
       element: <Layout />,
       children: [
-        {  index: true,
-          element: <ProtectedRoute><Products /></ProtectedRoute>},
-        { path: "products", element: <ProtectedRoute><Products /></ProtectedRoute> },
-        { path: "categories", element: <ProtectedRoute><Categories /></ProtectedRoute> },
-        { path: "brands", element:<ProtectedRoute><Brands /></ProtectedRoute>   },
-        { path: "cart", element:<ProtectedRoute><Cart /></ProtectedRoute>   },
-        { path: "profile", element:<ProtectedRoute><Profile /></ProtectedRoute>   },
-        { path: "payment", element:<ProtectedRoute><Payment /></ProtectedRoute>   },
-        { path: "allOrders", element:<ProtectedRoute><AllOrders /></ProtectedRoute>   },
+        {
+          index: true,
+          element: (
+            <ProtectedRoute>
+              <Products />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: "products",
+          element: (
+            <ProtectedRoute>
+              <Products />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: "categories",
+          element: (
+            <ProtectedRoute>
+              <Categories />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: "brands",
+          element: (
+            <ProtectedRoute>
+              <Brands />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: "cart",
+          element: (
+            <ProtectedRoute>
+              <Cart />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: "profile",
+          element: (
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: "payment",
+          element: (
+            <ProtectedRoute>
+              <Payment />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: "allOrders",
+          element: (
+            <ProtectedRoute>
+              <AllOrders />
+            </ProtectedRoute>
+          ),
+        },
 
         // : this mean you has parameter
-        { path: "productsDetails/:id", element:<ProtectedRoute><ProductsDetails /></ProtectedRoute>},
+        {
+          path: "productsDetails/:id",
+          element: (
+            <ProtectedRoute>
+              <ProductsDetails />
+            </ProtectedRoute>
+          ),
+        },
         { path: "login", element: <Login /> },
         { path: "register", element: <Register /> },
-        { path:"*" , element:<NotFound/>}
+        { path: "*", element: <NotFound /> },
         // { path: "logout", element: <Logout /> },
-
       ],
     },
   ]);
 
   return (
-   <>
-   
-   <QueryClientProvider client={newClient}>
-      {/* for CartContext */}
-      
-         <CartContextProvider>
-          
+    <>
+      <QueryClientProvider client={newClient}>
+        {/* for CartContext */}
+
+        <CartContextProvider>
           {/* // AuthProvider  => اول حاجه بترن في الموقع */}
 
-      <AuthProvider>
-        <RouterProvider router={routes} />
-      </AuthProvider>
-         
-         
-         </CartContextProvider>
-{/* library hot toaster */}
-         <Toaster/>
-    </QueryClientProvider>
+          <AuthProvider>
+            <RouterProvider router={routes} />
+          </AuthProvider>
+        </CartContextProvider>
+        {/* library hot toaster */}
+        <Toaster />
+      </QueryClientProvider>
 
-   
-   <Offline >
-
-    <div className=" position-fixed  top-0 start-0  bg-dark text-white p-3 rounded-3  text-capitalize">
-
-
-opps... you are offline now.
-    </div>
-
-
-   </Offline>
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   </>
+      <Offline>
+        <div className=" position-fixed  top-0 start-0  bg-dark text-white p-3 rounded-3  text-capitalize">
+          opps... you are offline now.
+        </div>
+      </Offline>
+    </>
   );
 }

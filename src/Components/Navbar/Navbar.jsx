@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Categories from "../Categories/Categories";
 import { Link } from "react-router-dom";
-import imgLogo from "../../images/freeLog.png";
+import imgLogo from "../../images/2jv4Mf-LogoMakr.png";
 import { AuthContext } from "../Context/store";
 import { useNavigate } from "react-router-dom";
 import { contextCart } from "../Context/CartContext";
@@ -31,9 +31,9 @@ export default function Navbar() {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-          <a className="navbar-brand">
-            <img src={imgLogo} alt="logo" />
-          </a>
+          <Link  className="navbar-brand">
+            <img className="imglogo" src={imgLogo} alt="logo" />
+          </Link>
           <button
             className="navbar-toggler"
             type="button"

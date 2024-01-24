@@ -1,7 +1,7 @@
 import { jwtDecode } from "jwt-decode";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { RotatingLines } from "react-loader-spinner";
+import { Blocks } from "react-loader-spinner";
 
 export default function Profile() {
   const [UserName, setUserName] = useState(null);
@@ -15,16 +15,14 @@ export default function Profile() {
   if (UserName === null) {
     return (
       <div className=" vh-100 d-flex justify-content-center align-items-center">
-        <RotatingLines
-          visible={true}
-          height="96"
-          width="96"
-          color="grey"
-          strokeWidth="5"
-          animationDuration="0.75"
-          ariaLabel="rotating-lines-loading"
+      <Blocks
+          height="80"
+          width="80"
+          color="#4fa94d"
+          ariaLabel="blocks-loading"
           wrapperStyle={{}}
-          wrapperClass=""
+          wrapperClass="blocks-wrapper"
+          visible={true}
         />
       </div>
     );

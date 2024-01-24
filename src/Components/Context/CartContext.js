@@ -109,11 +109,8 @@ return data;
 
 
 
-useEffect(() => {
 
-  getUserCart();
 
-}, [cartsProduct])
 
  // Clear all items in the cart
  async function clearCart() {
@@ -132,6 +129,12 @@ useEffect(() => {
     console.log("error", e);
   }
 }
+
+useEffect(() => {
+
+  getUserCart();
+
+}, [cartsProduct])
 
 
 

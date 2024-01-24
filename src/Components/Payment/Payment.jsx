@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 
 export default function Payment() {
-  let { CartsId, setCartsProduct, setNumOfCartItems, setTotalCartPrice } =
+  let { CartsId, setCartsProduct, setNumOfCartItems, setTotalCartPrice  ,clearCart} =
     useContext(contextCart);
   let [phoneVale, setPhone] = useState("");
   let [CityValue, setCity] = useState("");
@@ -80,9 +80,11 @@ export default function Payment() {
         setDetails("");
         
         // Clear the cart data from the context
-        setCartsProduct([]);
-        setNumOfCartItems(0);
-        setTotalCartPrice(0);
+        // setCartsProduct([]);
+        // setNumOfCartItems(0);
+        // setTotalCartPrice(0);
+        clearCart();
+
       } else {
         toast.error("Error On Creating");
       }
@@ -96,7 +98,7 @@ export default function Payment() {
 
   return (
     <>
-      <div className="container py-5">
+      <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}  className="container py-5">
         <form>
           <label htmlFor="phone">Phone :</label>
           <input
@@ -104,6 +106,7 @@ export default function Payment() {
             type="tel"
             placeholder="Phone"
             className=" mb-3 form-control"
+            required
             value={phoneVale}
             onChange={(e) => setPhone(e.target.value)}
           />
@@ -115,6 +118,8 @@ export default function Payment() {
             type="text"
             placeholder="City"
             className=" mb-3 form-control"
+            required
+
             value={CityValue}
             onChange={(e) => setCity(e.target.value)}
           />

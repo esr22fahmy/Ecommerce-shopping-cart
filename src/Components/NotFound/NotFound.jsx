@@ -1,9 +1,9 @@
 import React from 'react'
-import imgError from "../../images/error.svg"
+import imgError from "../../images/error.jpg"
 
 export default function NotFound() {
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }} className=' w-50 mx-auto my-5 text-center'>
+    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }} className=' w-50 mx-auto my-1 text-center'>
       <img src={imgError} />
       
     </div>

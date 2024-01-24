@@ -180,7 +180,7 @@ export default function Login() {
           <button
             type=" submit"
             disabled={!formFun.isValid || formFun.dirty === false}
-            className="  btn btn-success"
+            className="  btn  btn-primary"
           >
             {loadingBtn ? (
               <FallingLines

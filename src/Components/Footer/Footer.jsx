@@ -17,7 +17,7 @@ export default function Footer() {
         </div>
 
         <div className="col-md-3">
-          <button className=" btn btn-success form-control"> share app link </button>
+          <button style={{backgroundColor:"rgb(40,47,131) ", color:"white"}} className=" btn  form-control"> share app link </button>
 
        </div>
 

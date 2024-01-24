@@ -1,42 +1,35 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
-import { RotatingLines } from "react-loader-spinner";
+import { Blocks } from "react-loader-spinner";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
-import styledet from "./ProductsDetails.module.css"
+import styledet from "./ProductsDetails.module.css";
 import { contextCart } from "../Context/CartContext";
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
 export default function ProductsDetails() {
-
-  let [iconLoader ,setIconLoader] = useState()
+  let [iconLoader, setIconLoader] = useState();
 
   // useParams give me paramter path
   let params = useParams();
   // console.log(params.id);
   // context
-  let {addProductContext} = useContext(contextCart);
+  let { addProductContext } = useContext(contextCart);
 
-  async function addProductCart(id){
+  async function addProductCart(id) {
     setIconLoader(true);
 
-    let res = await addProductContext(id)
-    console.log(res)
-    if(res.status ==="success"){
-      
-      toast.success(res.message ,{
-        duration:2000,
-    
-    
-    
-      })
-    }else{
-      toast.error("error happend ...")
+    let res = await addProductContext(id);
+    console.log(res);
+    if (res.status === "success") {
+      toast.success(res.message, {
+        duration: 2000,
+      });
+    } else {
+      toast.error("error happend ...");
     }
 
     setIconLoader(false);
-
-    }
-    
+  }
 
   function getProductsDetails() {
     return axios.get(
@@ -50,16 +43,14 @@ export default function ProductsDetails() {
   if (isLoading) {
     return (
       <div className=" vh-100 d-flex justify-content-center align-items-center">
-        <RotatingLines
-          visible={true}
-          height="96"
-          width="96"
-          color="grey"
-          strokeWidth="5"
-          animationDuration="0.75"
-          ariaLabel="rotating-lines-loading"
+        <Blocks
+          height="80"
+          width="80"
+          color="#4fa94d"
+          ariaLabel="blocks-loading"
           wrapperStyle={{}}
-          wrapperClass=""
+          wrapperClass="blocks-wrapper"
+          visible={true}
         />
       </div>
     );
@@ -82,11 +73,16 @@ export default function ProductsDetails() {
             <p className=" text-muted">{data?.data.data.description}</p>
             <h5> price : {data?.data.data.price} EGP</h5>
 
-            <button onClick={()=>addProductCart(data.data.data.id)} className={`${styledet.btn} w-100 rounded-3 my-3`}> 
-               
-               {iconLoader?<i className="fa-solid fa-spinner spinner"></i>: "+ add to cart" }
-               
-              </button>
+            <button
+              onClick={() => addProductCart(data.data.data.id)}
+              className={`${styledet.btn} w-100 rounded-3 my-3`}
+            >
+              {iconLoader ? (
+                <i className="fa-solid fa-spinner spinner"></i>
+              ) : (
+                "+ add to cart"
+              )}
+            </button>
           </div>
         </div>
       </div>

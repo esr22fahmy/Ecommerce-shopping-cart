@@ -2,7 +2,7 @@ import { Formik, useFormik } from "formik";
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { FallingLines } from "react-loader-spinner";
+import { Blocks } from "react-loader-spinner";
 
 export default function Register() {
   const [errorMessage, setErrorMessage] = useState("");
@@ -21,7 +21,6 @@ export default function Register() {
   };
 
   let funVaild = function (value) {
- 
     setErrorMessage("");
 
     let errors = {};
@@ -78,7 +77,6 @@ export default function Register() {
   };
 
   async function registerNewUser(val) {
-  
     setloadingBtn(true);
     try {
       let { data } = await axios.post(
@@ -119,7 +117,15 @@ export default function Register() {
   });
   return (
     <>
-      <div style={{marginTop:"8rem" ,display: "flex", flexDirection: "column", minHeight: "100vh" }} className=" w-75 m-auto py-5">
+      <div
+        style={{
+          marginTop: "8rem",
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
+        }}
+        className=" w-75 m-auto py-5"
+      >
         <h2> Register Now :</h2>
 
         <form onSubmit={formFun.handleSubmit} className=" pt-5">
@@ -222,14 +228,17 @@ export default function Register() {
           <button
             type=" submit"
             disabled={!formFun.isValid || formFun.dirty === false}
-            className="  btn btn-success"
+            className="  btn  btn-primary"
           >
             {loadingBtn ? (
-              <FallingLines
-                color="#fff"
-                width="50"
+              <Blocks
+                height="80"
+                width="80"
+                color="#4fa94d"
+                ariaLabel="blocks-loading"
+                wrapperStyle={{}}
+                wrapperClass="blocks-wrapper"
                 visible={true}
-                ariaLabel="falling-lines-loading"
               />
             ) : (
               "Register"
