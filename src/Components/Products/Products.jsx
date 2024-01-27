@@ -8,11 +8,13 @@ import CategoriesSlick from "../CategoriesSlick/CategoriesSlick";
 import { Link } from "react-router-dom";
 import { contextCart } from "../Context/CartContext";
 import toast from "react-hot-toast";
-import Home from "../Home/Home";
+import {FavContext} from "../../Components/Context/CartContext"
 
 export default function Products() {
   const productsRef = useRef();
+  const { favoriteItem } = useContext(contextCart);
 
+// console.log(favoriteItem)
   // context
 
   let { addProductContext } = useContext(contextCart);
@@ -80,9 +82,16 @@ export default function Products() {
                     alt="products"
                   />
 
-                  <h6 className={`${styleProducts.colorCategory} mt-3`}>
+                  {/* <h6 className={`${styleProducts.colorCategory} mt-3`}>
+                    {pr.category.name}
+                  </h6> */}
+
+                  <div className=" d-flex justify-content-between mt-3">
+                  <h6 className={`${styleProducts.colorCategory} `}>
                     {pr.category.name}
                   </h6>
+                    
+                  </div>
                   <h5>
                     {pr.title.length > 15
                       ? pr.title.slice(0, 15) + `...`
@@ -100,6 +109,11 @@ export default function Products() {
                   </div>
                 </div>
               </Link>
+              {/* <button  onClick={() => favoriteItem(pr.id)} className=" btn  btn-danger w-100">
+                      <i   
+ className="fa-solid fa-heart text-white"></i>
+                    </button> */}
+
               <button
                 onClick={() => onclickAddProduct(pr.id)}
                 className={`${styleProducts.btn} w-100 rounded-3 my-3`}

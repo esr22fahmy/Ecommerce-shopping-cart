@@ -112,6 +112,9 @@ return data;
 
 
 
+
+
+
  // Clear all items in the cart
  async function clearCart() {
   try {
@@ -130,6 +133,41 @@ return data;
   }
 }
 
+
+// ==============
+async function addProduct(productId) {
+  try {
+    let { data } = await axios.get(
+      "https://ecommerce.routemisr.com/api/v1/products",
+      // el body
+      { "productId": productId },
+    );
+    console.log(data)
+    return data;
+  } catch (e) {
+    console.log("error", e);
+  }
+}
+
+// favorite Item
+
+async function favoriteItem(productId) {
+  try {
+    let { data } = await axios.post(
+      "https://ecommerce.routemisr.com/api/v1/wishlist",
+      // el body
+      { "productId": productId },
+      { headers: { token: localStorage.getItem("tok") } }
+    );
+    console.log(data)
+    return data;
+  } catch (e) {
+    console.log("error", e);
+  }
+}
+
+
+
 useEffect(() => {
 
   getUserCart();
@@ -142,7 +180,7 @@ useEffect(() => {
 
 
     <contextCart.Provider value={{ addProductContext ,getUserCart , cartsProduct ,numOfCart ,totalCartPrice 
-    ,DeleteProduct ,updateProduct ,CartsId ,setCartsProduct ,setNumOfCartItems ,setTotalCartPrice ,clearCart }}>
+    ,DeleteProduct ,updateProduct ,CartsId ,setCartsProduct ,setNumOfCartItems ,setTotalCartPrice ,clearCart ,favoriteItem ,addProduct}}>
       {children}
     </contextCart.Provider>
   );

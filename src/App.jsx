@@ -25,6 +25,8 @@ import Payment from "./Components/Payment/Payment";
 import AllOrders from "./Components/AllOrders/AllOrders";
 import NotFound from "./Components/NotFound/NotFound";
 import { Offline } from "react-detect-offline";
+import Favorite from './Components/Favorite/Favorite';
+import { FavProvider } from './Components/Context/FavoriteCon'; 
 
 export default function App() {
   let newClient = new QueryClient();
@@ -107,6 +109,14 @@ export default function App() {
             </ProtectedRoute>
           ),
         },
+        {
+          path: "favorite",
+          element: (
+            <ProtectedRoute>
+              <Favorite/>
+            </ProtectedRoute>
+          ),
+        },
         { path: "login", element: <Login /> },
         { path: "register", element: <Register /> },
         { path: "*", element: <NotFound /> },
@@ -124,7 +134,11 @@ export default function App() {
           {/* // AuthProvider  => اول حاجه بترن في الموقع */}
 
           <AuthProvider>
+          <FavProvider>
+
             <RouterProvider router={routes} />
+            </FavProvider>
+
           </AuthProvider>
         </CartContextProvider>
         {/* library hot toaster */}
